@@ -1,0 +1,88 @@
+/*
+  General Markup Styling
+*/
+body, html {
+  font-family: open sans, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+}
+
+
+/*
+  If javascript is not available
+*/
+
+.no-js body,
+[data-nav-open="true"],
+[data-nav-temp-state="true"] {
+  padding: 0 0 0 200px;
+}
+
+.no-js [role="navigation"] {
+  transform: translateX(0);
+}
+
+.no-js #appNavToggle {
+  display: none;
+}
+
+
+/*
+  Wrappers
+*/
+
+.content {
+  padding: 1.5em;
+}
+
+/*
+  Navigation
+*/
+[role="navigation"] {
+  background: #ccc;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 180px;
+  transform: translateX(-200px);
+}
+
+[role="navigation"]:focus,
+[data-nav-open="true"] [role="navigation"],
+[data-nav-temp-state="true"] [role="navigation"] {
+  transform: translateX(0px);
+}
+
+
+/*
+  Skip Links
+*/
+
+.skip-links {
+  position: absolute;
+}
+
+.skip-links li {
+  list-style: none;
+}
+
+.skip-links a {
+  position: absolute;
+  left: -99999px;
+  top: 0;
+  z-index: 9;
+  background: #fff;
+  border: 2px solid #555;
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.skip-links a:focus {
+  left: 20px;
+}
