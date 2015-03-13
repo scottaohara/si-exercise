@@ -1,0 +1,101 @@
+/*
+  General Markup Styling
+*/
+body, html {
+  font-family: lato, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  transition: padding .2s;
+}
+
+
+/*
+  If javascript is not available
+*/
+.no-js body,
+[data-nav-open="true"],
+[data-nav-temp-state="true"] {
+  padding: 0 0 0 180px;
+
+}
+
+.no-js [role="navigation"] {
+  transform: translateX(0);
+}
+
+.no-js #appNavToggle {
+  display: none;
+}
+
+
+
+/*
+  Wrappers
+*/
+
+.content {
+  padding: 1.5em;
+}
+
+[role="banner"] {
+  background: #333;
+  color: #fff;
+}
+
+[role="banner"] a {
+  color: #fff;
+}
+
+/*
+  Navigation
+*/
+
+[role="navigation"] {
+  background: #ccc;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 180px;
+  transform: translateX(-222px);
+  transition: transform .2s;
+}
+
+.no-js [role="navigation"]:target,
+[role="navigation"]:focus,
+[data-nav-open="true"] [role="navigation"],
+[data-nav-temp-state="true"] [role="navigation"] {
+  transform: translateX(0px);
+}
+
+/*
+  Skip Links
+*/
+
+.jump-links {
+  position: absolute;
+}
+
+.jump-links li {
+  list-style: none;
+}
+
+.jump-links a {
+  background: #fff;
+  border: 2px solid #555;
+  left: -99999999px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.jump-links a:focus {
+  left: 20px;
+}
