@@ -4,12 +4,7 @@ $(function () {
    $('html').removeClass('no-js')
 
   // setup vars
-  var inner = $('#app_nav a'),
-      appNav = $('#app_nav'),
-      navBTNs = $('.js--toggle-nav'),
-      menuBTN = $('#appNavToggle'),
-
-      page = $('#page');
+  var page = $('#page');
 
 
   // allow for the nav to pop out if a user has focused on a nav item
